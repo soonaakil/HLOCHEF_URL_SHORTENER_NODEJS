@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+                <style>
+    .typing-footer {
+        width: 80%;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid #777;
+        animation: typing 3s steps(30, end), blink .75s step-end infinite;
+        font-family: 'Playfair Display', serif;
+        /* font-family: monospace; */
+        font-size: 19px;
+        /* text-align: center; */
+        /* margin-top: 50px; */
+        color: #777;
+    }
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+
+    @keyframes blink {
+        from, to { border-color: transparent }
+        50% { border-color: #777 }
+    }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <header class="typing-footer">
+           ✨ Designed & Developed by <strong>Aakil</strong> | <a href="https://github.com/soonaakil" target="_blank">GitHub</a> ✨
+        </header>
+
+<h1>NodeJS URL SHORTENER</h1>
+        <form action="/short" method="POST">
+            <label for="longUrl">Enter Long URL:</label>
+            <input type="text" id="longUrl" name="longUrl" required>
+            <% if (!shortUrl) { %>
+                <div class="btn">
+                    <button type="submit" id="myButton" class="gradient-button">Shorten</button>
+                </div>
+            <% } %>
+        </form>
+        <% if(shortUrl) {%>
+            <p>
+                Short URL:- <a href="<%=shortUrl %>" target="_blank" >
+                <%=shortUrl %>
+            </p>
+        <%}%>
+    </div>
+</body>
+</html>
