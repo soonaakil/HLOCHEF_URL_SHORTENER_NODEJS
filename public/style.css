@@ -235,29 +235,29 @@ input[type="text"]:focus {
 .url-design {
   /* margin-top: 20px; */
   /* font-size: 1rem; */
-  color: #ffe4e1;
+  /* color: #ffe4e1; */
   animation: fadeIn 1.2s ease-in-out;
-  border: 1px solid #f0f0f0;
+  /* border: 1px solid #f0f0f0; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 11px;
-  background-color: #0e876d;
+  /* padding: 0 11px; */
+  /* background-color: #0e876d; */
 }
-.url-design p {
+/* .url-design p { */
   /* background-color: #1cc7a2; */
-  font-size: 1.2rem;
+  /* font-size: 1.2rem;
   font-weight: 700;
   color: #ffe4e1;
   border-right: 2px solid #f0f0f0;
-  padding: 0 11px;
-}
+  padding: 0 11px; */
+/* } */
 .url-design span i {
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-/* p {
+.url-design p {
   margin-top: 20px;
   margin-left: 5px;
   font-size: 18px;
@@ -265,8 +265,8 @@ input[type="text"]:focus {
   color: #eaeaea;
   /* font-size: 16px;
   color: #ffffff; */
-  /* animation: fadeIn 1.2s ease-in-out; */
-} */
+  animation: fadeIn 1.2s ease-in-out;
+}
 
 a {
   /* color: #ffddc1; */
