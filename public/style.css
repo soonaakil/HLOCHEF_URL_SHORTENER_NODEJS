@@ -281,3 +281,20 @@ a:hover {
   text-decoration: underline;
   color: #ffe4e1;
 }
+  .home-button {
+    display: inline-block;
+    padding: 10px 15px;
+    /* font-size: 16px; */
+    /* background-color: #4CAF50; */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+   font-size: 1.5rem;
+   cursor: pointer;
+  }
+.btn-group{ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
