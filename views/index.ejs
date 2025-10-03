@@ -50,12 +50,33 @@
             <% } %>
         </form>
         <% if(shortUrl) {%>
-            <h1>Your URL, Now in a Compact Form!</h1>
-            <p>
-                Short URL:- <a href="<%=shortUrl %>" target="_blank" >
-                <%=shortUrl %>
-            </p>
+      <h3>🎉 Success! Your short URL is ready :</h3>
+      <div class="url-design">
+        <p>Short URL</p>
+        <a href="<%= shortUrl %>" id="shortUrl" target="_blank">
+          <%= shortUrl %>
+        </a>
+        <span id="copyBtn"><i class="fa-regular fa-copy icon"></i></span>
+      </div>
         <%}%>
     </div>
+    <script>
+      const copyBtn = document.getElementById("copyBtn");
+      const shortUrl = document.getElementById("shortUrl").textContent;
+
+      copyBtn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(shortUrl);
+          copyBtn.querySelector(".icon").className = "fa-solid fa-check icon";
+          setTimeout(() => {
+            copyBtn.querySelector(".icon").className =
+              "fa-regular fa-copy icon";
+          }, 2000);
+        } catch (err) {
+          console.error("Failed to copy: ", err);
+        }
+      });
+    </script>
+
 </body>
 </html>
