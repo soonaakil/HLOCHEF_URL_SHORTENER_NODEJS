@@ -41,15 +41,16 @@
 
 <h1>NodeJS URL SHORTENER</h1>
         <form action="/short" method="POST">
+            <% if (!shortUrl) { %>
             <label for="longUrl">Enter Long URL:</label>
             <input type="text" id="longUrl" name="longUrl" required>
-            <% if (!shortUrl) { %>
                 <div class="btn">
                     <button type="submit" id="myButton" class="gradient-button">Shorten</button>
                 </div>
             <% } %>
         </form>
         <% if(shortUrl) {%>
+            <h1>Your URL, Now in a Compact Form!</h1>
             <p>
                 Short URL:- <a href="<%=shortUrl %>" target="_blank" >
                 <%=shortUrl %>
