@@ -5,7 +5,9 @@ export const shortUrl = async (req, res)=> {
     const longUrl = req.body.longUrl;
     const shortCode = shortid.generate();
 
-    const shortUrl = `http://localhost:3000/${shortCode}`;
+    const baseURL = process.env.BASE_URL;
+    const shortUrl = `${baseURL}/${shortCode}`;
+    // const shortUrl = `http://localhost:3000/${shortCode}`;
     // const shortUrl = `HloChef/${shortCode}`;
     // save the database 
     const newUrl = new Url({shortCode, longUrl});
